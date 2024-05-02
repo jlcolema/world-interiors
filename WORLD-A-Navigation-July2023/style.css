@@ -1,0 +1,318 @@
+/*
+ * Table of Contents
+ * 01. Announcement Bar
+ * 02. Mobile Navigation
+ * 03. Navigation
+ */
+
+/* 01. Announcement Bar */
+
+.ob-nav-update .announcement-bar {}
+
+	/* Displays at 720px and above */
+
+	.ob-nav-update .announcement-bar-text {}
+
+	@media screen and (min-width: 720px) {
+		.ob-nav-update .announcement-bar-text {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+		}
+	}
+
+	@media screen and (min-width: 769px) {
+		.ob-nav-update .announcement-bar-text {
+			justify-content: space-between;
+			flex-direction: row;
+		}
+	}
+
+		.ob-nav-update .announcement-bar-text__message {}
+
+		.ob-nav-update .announcement-bar-text__phone {
+			display: flex;
+			align-items: center;
+			margin-top: 7px;
+		}
+
+		@media screen and (min-width: 769px) {
+			.ob-nav-update .announcement-bar-text__phone {
+				margin-top: 0;
+			}
+		}
+
+			.ob-nav-update .announcement-bar-text__phone-icon {
+				display: inline-block;
+				height: 15px;
+				margin-right: 10px;
+			}
+
+				.ob-nav-update .announcement-bar-text__phone #M_Variation {
+					fill: #ffffff;
+				}
+
+			.ob-nav-update .announcement-bar-text__phone-text {}
+
+/* 02. Mobile Navigation */
+
+/* Toggle for Navigation */
+
+@media screen and (max-width: 1123px) and (min-width: 769px) {
+	.ob-nav-update .site-header-menu-toggle {
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.ob-nav-update .site-header-menu-toggle {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@media screen and (min-width: 1124px) {
+	.ob-nav-update .site-header-menu-toggle {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.ob-nav-update .site-mobile-nav {}
+
+@media screen and (min-width: 1124px) {
+	.ob-nav-update .site-mobile-nav {
+		display: none;
+	}
+}
+
+	.ob-nav-update .site-mobile-nav .mobile-nav-panel {}
+
+		.ob-nav-update .site-mobile-nav .site-header-actions {}
+
+			.ob-nav-update .site-mobile-nav .site-header-actions__phone {
+				display: flex;
+			}
+
+				.ob-nav-update .site-mobile-nav .site-header-actions__phone-icon {
+					display: inline-block;
+					height: 15px;
+					margin-right: 10px;
+				}
+
+					.ob-nav-update .site-mobile-nav .site-header-actions__phone-icon svg {}
+
+				.ob-nav-update .site-mobile-nav .site-header-actions__phone-text {
+					font-weight: 700;
+				}
+
+		.ob-nav-update .mobile-nav-content {}
+
+			.ob-nav-update .mobile-nav-content .navmenu-depth-1 {}
+
+				.ob-nav-update .mobile-nav-content .navmenu-item {}
+
+					.ob-nav-update .mobile-nav-content .navmenu-link {
+						border-bottom: 1px solid #e9e9e9;
+					}
+
+					.ob-nav-update .mobile-nav-content .navmenu-depth-1 > li > .navmenu-link {
+						font-weight: 500 !important;
+						color: #5e6165; /* originally #64686c, but changed for ADA? */
+					}
+
+					.ob-nav-update .mobile-nav-content .navmenu-depth-1 > li > .navmenu-link-parent-active {
+						color: #304152;
+					}
+
+					.ob-nav-update .mobile-nav-content .navmenu-button {
+						background-color: transparent;
+					}
+
+					.ob-nav-update .mobile-nav-content .navmenu-link-parent-active ~ .navmenu-button {
+						background-color: transparent;
+					}
+
+						.ob-nav-update .mobile-nav-content .navmenu-button-wrapper {}
+
+							.ob-nav-update .mobile-nav-content .navmenu-icon {}
+
+								.ob-nav-update .mobile-nav-content .navmenu-icon .navmenu-icon-plus {
+									width: auto;
+									height: auto;
+									transform: none !important;
+									transition: none;
+								}
+
+								.ob-nav-update .mobile-nav-content .navmenu-button[aria-expanded="true"] .navmenu-icon .navmenu-icon-plus {
+									display: none;
+								}
+
+								.ob-nav-update .mobile-nav-content .navmenu-icon .icon-chevron-down {
+									display: none;
+									transform: none;
+								}
+
+								.ob-nav-update .mobile-nav-content .navmenu-button[aria-expanded="true"] .navmenu-icon .icon-chevron-down {
+									display: block;
+								}
+
+					.ob-nav-update .mobile-nav-content .navmenu-submenu {
+						border-bottom: 1px solid #e9e9e9;
+						background-color: transparent;
+					}
+
+						.ob-nav-update .mobile-nav-content .navmenu-submenu .navmenu-item {}
+
+							.ob-nav-update .mobile-nav-content .navmenu-link-depth-2 {
+								color: #2d2d2d;
+								border: none;
+							}
+
+							.ob-nav-update .mobile-nav-content .navmenu-item--shop-all .navmenu-link-depth-2 {
+								font-weight: bold;
+							}
+
+							.ob-nav-update .mobile-nav-content .navmenu-link-active,
+							.ob-nav-update .mobile-nav-content .navmenu-link-depth-2:hover {
+								color: #b83d00;
+							}
+
+
+/*** Look in to using this to help with the dropdown animation ***/
+
+/* When not open */
+
+/* .navmenu-submenu:not(.navmenu-meganav)[data-animation] {
+  display: block;
+  height: var(--menu-closed-height, 0);
+  opacity: 0;
+} */
+
+/* When Opening */
+
+/* .navmenu-submenu:not(.navmenu-meganav)[data-animation="closed=>open"] {
+  opacity: 1;
+  transition: height 75ms cubic-bezier(0,0,.2,1);
+} */
+
+/* Open */
+
+/* .navmenu-submenu:not(.navmenu-meganav)[data-animation-state=open] {
+  display: block;
+  height: var(--menu-open-height, auto);
+  opacity: 1;
+} */
+
+
+/* 03. Navigation */
+
+.ob-nav-update .site-navigation-wrapper {}
+
+@media screen and (min-width: 1024px) {
+	.ob-nav-update .site-header-nav--open .site-navigation-wrapper {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1124px) {
+	.ob-nav-update .site-header-nav--open .site-navigation-wrapper {
+		display: block;
+	}
+}
+
+	.ob-nav-update .site-navigation {
+		display: block;
+	}
+
+		.ob-nav-update .site-navigation .navmenu-depth-1 {
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			margin-left: 0;
+		}
+
+			.ob-nav-update .site-navigation .navmenu-item {}
+
+				.ob-nav-update .site-navigation .navmenu-id-explore,
+				.ob-nav-update .site-navigation .navmenu-id-helpful-information {
+					position: relative;
+				}
+
+				.ob-nav-update .site-navigation .navmenu-link-depth-1 {
+					width: 100%;
+					padding-left: 0;
+					font-weight: 500 !important;
+					color: #5e6165; /* originally #64686c, but changed for ADA? */
+				}
+
+				.ob-nav-update .site-navigation .navmenu-link-depth-1:hover,
+				.ob-nav-update .site-navigation .navmenu-link-depth-1[aria-expanded="true"] {
+					color: #304152;
+					opacity: 1 !important;
+				}
+
+					.ob-nav-update .site-navigation .navmenu-icon {}
+
+						.ob-nav-update .site-navigation .navmenu-icon svg {}
+
+				.ob-nav-update .site-navigation .navmenu-submenu-wrapper {
+					position: absolute;
+					top: 100%;
+					display: flex;
+					flex-wrap: nowrap;
+					justify-content: flex-start;
+					align-items: flex-start;
+					margin-left: -25px;
+					padding-top: 15px;
+					padding-bottom: 15px;
+					z-index: 702;
+					background-color: #ffffff;
+				}
+
+				.ob-nav-update .site-navigation .navmenu-id-explore .navmenu-submenu-wrapper,
+				.ob-nav-update .site-navigation .navmenu-id-helpful-information .navmenu-submenu-wrapper {
+					right: 0;
+					margin-left: auto;
+					margin-right: -25px;
+				}
+
+					.ob-nav-update .site-navigation .navmenu-submenu {
+						position: relative;
+						padding-top: 0 !important;
+						padding-bottom: 0 !important;
+						margin-left: 0 !important;
+						background-color: transparent;
+					}
+
+						.ob-nav-update .site-navigation .navmenu-submenu .navmenu-item {}
+
+							.ob-nav-update .site-navigation .navmenu-submenu .navmenu-link-depth-2 {
+								font-size: 0.9375rem;
+								line-height: 1.1333333333;
+								color: #2d2d2d;
+							}
+
+							.ob-nav-update .site-navigation .navmenu-submenu .navmenu-item--shop-all .navmenu-link-depth-2 {
+								font-weight: bold;
+							}
+
+							.ob-nav-update .site-navigation .navmenu-submenu .navmenu-link-depth-2:hover,
+							.ob-nav-update .site-navigation .navmenu-submenu .navmenu-link-active {
+								color: #b83d00;
+							}
+
+					.ob-nav-update .site-navigation .navmenu-promo {
+						display: none;
+						padding-right: 1.5625rem;
+					}
+
+					.ob-nav-update .site-navigation .navmenu-submenu[data-animation-state="open"] + .navmenu-promo {
+						display: block;
+					}
+
+						.ob-nav-update .site-navigation .navmenu-promo__link {}
+
+							.ob-nav-update .site-navigation .navmenu-promo__image {}
